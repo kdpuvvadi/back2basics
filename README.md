@@ -1,105 +1,104 @@
-<div align="center">
+# Back2Basics
 
-  # Chirpy Jekyll Theme
+Learn Basics with Back2Basics
 
-  A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
+## Setup
 
-  [![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy?color=brightgreen)](https://rubygems.org/gems/jekyll-theme-chirpy)
-  [![Build Status](https://github.com/cotes2020/jekyll-theme-chirpy/workflows/build/badge.svg?branch=master&event=push)](https://github.com/cotes2020/jekyll-theme-chirpy/actions?query=branch%3Amaster+event%3Apush)
-  [![Codacy Badge](https://app.codacy.com/project/badge/Grade/4e556876a3c54d5e8f2d2857c4f43894)](https://www.codacy.com/gh/cotes2020/jekyll-theme-chirpy/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cotes2020/jekyll-theme-chirpy&amp;utm_campaign=Badge_Grade)
-  [![GitHub license](https://img.shields.io/github/license/cotes2020/jekyll-theme-chirpy.svg)](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE)
-  [![996.icu](https://img.shields.io/badge/link-996.icu-%23FF4D5B.svg)](https://996.icu)
+Clone the repo 
 
-  [**Live Demo →**](https://cotes2020.github.io/chirpy-demo)
-
-  [![Devices Mockup](https://raw.githubusercontent.com/cotes2020/chirpy-images/main/commons/devices-mockup.png)](https://cotes2020.github.io/chirpy-demo)
-
-</div>
-
-## Features
-
-- Localized Layout
-- Dark/Light Theme Mode
-- Pinned Posts
-- Hierarchical Categories
-- Last Modified Date for Posts
-- Table of Contents
-- Auto-generated Related Posts
-- Syntax Highlighting
-- Mathematical Expressions
-- Mermaid Diagram & Flowchart
-- Disqus/Utterances/Giscus Comments
-- Search
-- Atom Feeds
-- Google Analytics
-- GA Pageviews Reporting
-- SEO & Performance Optimization
-
-
-## Quick Start
-
-Before starting, please follow the instructions in the [Jekyll Docs](https://jekyllrb.com/docs/installation/) to complete the installation of `Ruby`, `RubyGems`, `Jekyll`, and `Bundler`. In addition, [Git](https://git-scm.com/) is also required to be installed.
-
-### Step 1. Creating a New Site
-
-Create a new repository from the [**Chirpy Starter**](https://github.com/cotes2020/chirpy-starter/generate) and name it `<GH_USERNAME>.github.io`, where `GH_USERNAME` represents your GitHub username.
-
-### Step 2. Installing Dependencies
-
-Before running for the first time, go to the root directory of your site, and install dependencies as follows:
-
-```console
-$ bundle
+```bash
+git clone https://github.com/kdpuvvadi/back2basics.git`
+cd back2basics
 ```
 
-### Step 3. Running Local Server
+Install Ruby and other prerequisites on `Ubuntu`
 
-Run the following command in the root directory of the site:
-
-```console
-$ bundle exec jekyll s
+```bash
+sudo apt-get install ruby-full build-essential zlib1g-dev
 ```
 
-Or run with Docker:
+Install Ruby and other prerequisites on `Fedora`
 
-```console
-$ docker run -it --rm \
-    --volume="$PWD:/srv/jekyll" \
-    -p 4000:4000 jekyll/jekyll \
-    jekyll serve
+```bash
+sudo dnf install ruby ruby-devel openssl-devel redhat-rpm-config @development-tools
 ```
 
-After a while, navigate to the site at <http://localhost:4000>.
+Install Ruby and other prerequisites on `RHEL/RockyLinux`
 
-## Documentation
+```bash
+sudo dnf install ruby ruby-devel
+sudo dnf group install "Development Tools"
+```
 
-For more details on usage, please refer to the tutorial on the [demo website](https://cotes2020.github.io/chirpy-demo/) / [wiki](https://github.com/cotes2020/jekyll-theme-chirpy/wiki). Note that the tutorial is based on the [latest tag](https://github.com/cotes2020/jekyll-theme-chirpy/tags), and the features of the default branch are usually ahead of the documentation.
+add env varibles to `~/.bashrc`
 
-## Contributing
+```bash
+echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+```
 
-Welcome to report bugs, improve code quality or submit a new feature. For more information, see [contributing guidelines](.github/CONTRIBUTING.md).
+install Jekyll and Bundler
 
-## Credits
+```bash
+gem install jekyll bundler
+```
 
-This theme is mainly built with [Jekyll](https://jekyllrb.com/) ecosystem, [Bootstrap](https://getbootstrap.com/), [Font Awesome](https://fontawesome.com/) and some other wonderful tools (their copyright information can be found in the relevant files). The avatar and favicon design come from [Clipart Max](https://www.clipartmax.com/middle/m2i8b1m2K9Z5m2K9_ant-clipart-childrens-ant-cute/).
+## Installing Dependencies
 
-:tada: Thanks to all the volunteers who contributed to this project, their GitHub IDs are on [this list](https://github.com/cotes2020/jekyll-theme-chirpy/graphs/contributors). Also, I won't forget those guys who submitted the issues or unmerged PR because they reported bugs, shared ideas, or inspired me to write more readable documentation.
+Install dependencies by running `bundle`
 
-Last but not least, thank [JetBrains][jb] for providing the OSS development license.
+```bash
+bundle
+```
 
-## Sponsoring
+## Testing Locally
 
-If you like this theme or find it helpful, please consider sponsoring me, because it will encourage and help me better maintain the project, I will be very grateful!
+To run locally start a dev server with 
 
-[![Ko-fi](https://img.shields.io/badge/-Buy%20Me%20a%20Coffee-ff5f5f?logo=ko-fi&logoColor=white)](https://ko-fi.com/coteschung)
-[![Wechat Pay](https://img.shields.io/badge/-Tip%20Me%20on%20WeChat-brightgreen?logo=wechat&logoColor=white)][cn-donation]
-[![Alipay](https://img.shields.io/badge/-Tip%20Me%20on%20Alipay-blue?logo=alipay&logoColor=white)][cn-donation]
+```bash
+bundle exec jekyll s
+```
 
-## License
+Visit site at http://localhost:4000.
 
-This work is published under [MIT](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE) License.
+## Deploy on GitHub pages
 
-<!-- ReadMe links -->
+* Build action is done with GitHub actions with `.github/workflows/pages-deploy.yml`. Please make sure branch is same as your working branch incase if you've changed the branch name.
 
-[jb]: https://www.jetbrains.com/?from=jekyll-theme-chirpy
-[cn-donation]: https://cotes.gitee.io/alipay-wechat-donation/
+* If you are running on `ARM64` environment likes of `apple's M1/M2` run
+
+  ```bash
+  bundle lock --add-platform x86_64-linux
+  ```
+
+* Push commits to GitHub and after build has completed, `gh-pages` branch will be created.
+
+* Select the tab `Settings`, then click `Pages` in the left navigation bar, and then in the section Source of `GitHub Pages`, select the `/(root)` directory of branch `gh-pages` as the publishing source.
+
+* visit site at `<GITHUB_USERNAME>.github.io/<REPO_NAME>`.
+
+* If repo name is `<GITHUB_USERNAME>.github.io/` url will be same.
+
+## Manual Deploy
+
+To deploy site anywhere you like, build the site first with 
+
+```bash
+JEKYLL_ENV=production bundle exec jekyll b
+```
+
+Upload the directory `_site` to your server.
+
+## Deploy to CloudFlare Pages
+
+* Login to Cloudflare, Select `pages` on the `Dashboard`
+* If haven't connected to your git repo please do. 
+* select repo and set vars
+  * `Framework Preset` to `Jekyll`
+  * `Build command` to `jekyll build`
+  * `Build output directory` to `_site`
+* Clcik `Save and Deploy` to deploy your site on CF's network
+* url most likely would be(if it's unique enough) `<REPO_NAME>.pages.dev`
+
