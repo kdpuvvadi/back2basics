@@ -22,8 +22,10 @@ sudo adduser USERNAME
 ```
 
 > To add user with `adduser`, current user needs root permissions.
-> Replace `USERNAME` with desired username.
+{: .prompt-tip }
 
+> Replace `USERNAME` with desired username.
+{: .prompt-tip }
 To complete the setup enter details in the interactive shell. Sample output as bellow. `user1` is new user's username.
 
 ```shell
@@ -82,3 +84,4 @@ if you see something like `user1 is not in the sudoers file.  This incident will
 If the problem still persists, try running command again.
 
 > `sudo` comes with lot of responsibility and gives admin permissions, please be carefull. It can break the system.
+{: .prompt-tip }
