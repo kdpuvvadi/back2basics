@@ -6,7 +6,7 @@ tags: [basics, linux, bash, user]
 published: false
 ---
 
-`Sudo` user is special user in the linux system. To grant administrative permissions, user has to have sudo permissions. Normally only `root` user have `sudo` access. To run any operation as `root` first we need to grant `sudo` permissions to the user. 
+`Sudo` user is special user in the linux system. To grant administrative permissions, user has to have sudo permissions. Normally only `root` user have `sudo` access. To run any operation as `root` first we need to grant `sudo` permissions to the user.
 
 ## Adding user
 
@@ -23,7 +23,6 @@ sudo adduser USERNAME
 ```
 
 > To add user with `adduser`, current user needs root permissions.
-
 > Replace `USERNAME` with desired username.
 
 To complete the setup enter details in the interactive shell. Sample output as bellow. `user1` is new user's username.
@@ -50,3 +49,37 @@ Is the information correct? [Y/n]
 
 ## Add user to SUDO
 
+`usermod` is used to add user to `sudo` group. Syntax as follows
+
+```shell
+usermod -a -G sudo USERNAME
+```
+
+- `-G` is to add the given user to the said group.
+- `-a` is to append.
+
+Add `user1` to `sudo` group by running
+
+```shell
+sudo usermod -a -G user1
+```
+
+To test the permissions, switch to user `user1` by running.
+
+```shell
+su - user
+```
+
+Enter password when prompts.
+
+Run following to view the current release info of the system
+
+```shell
+sudo cat /etc/os-release
+```
+
+if you see something like `user1 is not in the sudoers file.  This incident will be reported`, it means changes didn't take effect. Try logout and then login.
+
+If the problem still persists, try running command again.
+
+> `sudo` comes with lot of responsibility and gives admin permissions, please be carefull. It can break the system.
