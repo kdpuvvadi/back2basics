@@ -4,7 +4,7 @@ Learn Basics with Back2Basics
 
 ## Setup
 
-Clone the repo 
+Clone the repo
 
 ```bash
 git clone https://github.com/kdpuvvadi/back2basics.git`
@@ -55,13 +55,13 @@ bundle
 
 ## Testing Locally
 
-To run locally start a dev server with 
+To run locally start a dev server with
 
 ```bash
 bundle exec jekyll s
 ```
 
-Visit site at http://localhost:4000.
+Visit site at [http://localhost:4000](http://localhost:4000).
 
 ## Deploy on GitHub pages
 
@@ -83,7 +83,7 @@ Visit site at http://localhost:4000.
 
 ## Manual Deploy
 
-To deploy site anywhere you like, build the site first with 
+To deploy site anywhere you like, build the site first with
 
 ```bash
 JEKYLL_ENV=production bundle exec jekyll b
@@ -94,7 +94,7 @@ Upload the directory `_site` to your server.
 ## Deploy to CloudFlare Pages
 
 * Login to Cloudflare, Select `pages` on the `Dashboard`
-* If haven't connected to your git repo please do. 
+* If haven't connected to your git repo please do.
 * select repo and set vars
   * `Framework Preset` to `Jekyll`
   * `Build command` to `jekyll build`
@@ -102,3 +102,7 @@ Upload the directory `_site` to your server.
 * Clcik `Save and Deploy` to deploy your site on CF's network
 * url most likely would be(if it's unique enough) `<REPO_NAME>.pages.dev`
 
+## License
+
+Under [MIT Licenses](./LICENSE)
+Logo is designed by [GDJ](https://openclipart.org/artist/GDJ) & Released under [cc publicdomain](https://creativecommons.org/licenses/publicdomain/)
