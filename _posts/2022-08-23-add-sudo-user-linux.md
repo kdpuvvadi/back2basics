@@ -3,7 +3,6 @@ title: Adding sudo user in Linux
 date: 2022-08-22 10:14:15 +0530
 categories: [Basics, Linux, User]
 tags: [basics, linux, bash, user]
-published: false
 ---
 
 `Sudo` user is special user in the linux system. To grant administrative permissions, user has to have sudo permissions. Normally only `root` user have `sudo` access. To run any operation as `root` first we need to grant `sudo` permissions to the user.
